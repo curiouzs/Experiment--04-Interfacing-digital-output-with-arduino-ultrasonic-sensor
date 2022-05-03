@@ -56,33 +56,33 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 ### PROGRAM 
 
-```python   
+```c   
 
 
-int trigPin = 2;
-int echoPin = 3;
-long time;
-int distance;
-void setup()
-{
-  pinMode(3,INPUT);
-  pinMode(2,OUTPUT);
-  Serial.begin(9600);
-}
-void loop()
-{
-  digitalWrite(2,LOW);
-  delay(2);
-  digitalWrite(2,HIGH);
-  delay(10);
-  digitalWrite(2,LOW);
-  time = pulseIn(3,HIGH);
-  distance = (time*0.034/2);
-  Serial.print("Distance = ");
-  Serial.println(distance);
-  delay(100);
+ int trig = 2;
+ int echo = 3;
+ long time;
+ int distance;
+ void setup()
+ {
+   pinMode(3,INPUT);
+   pinMode(2,OUTPUT);
+   Serial.begin(9600);
+ }
+ void loop()
+ {
+   digitalWrite(2,LOW);
+   delay(2);
+   digitalWrite(2,HIGH);
+   delay(10);
+   digitalWrite(2,LOW);
+   time = pulseIn(3,HIGH);
+   distance = (time*0.034/2);
+   Serial.print("Distance = ");
+   Serial.println(distance);
+   delay(100);
 
-}
+ }
 
 ```
 
